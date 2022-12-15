@@ -1,6 +1,6 @@
 In this project, we'd demonstarte a Three-tier Architecture while also ensuring that the disks used to store files on the Linux servers are adequately partitioned and managed through programs such as gdisk and LVM respectively.
 
-### Prerequisite
+### Prerequisites
 - A Laptop or PC to serve as a client
 - An EC2 Linux Server as a web server (This is where you will install WordPress)
 - An EC2 Linux server as a database (DB) serve
@@ -9,7 +9,7 @@ In this project, we'd demonstarte a Three-tier Architecture while also ensuring 
 
 ### Step 1 — Prepare the Web Server
 1. Launch an EC2 instance that will serve as “Web Server”.
-   > I am going to be using AWS RedHat Distribution
+> I am going to be using AWS RedHat Distribution
 2.  Create 3 volumes in the same availability zone as your Web Server EC2, each of 10 GiB 
 
 ![](assets/1.png)
