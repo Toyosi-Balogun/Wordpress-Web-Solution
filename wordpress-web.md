@@ -228,6 +228,7 @@ Verify the entire setup:
 20. Test the configuration and reload the daemon
  
  `sudo mount -a`
+ 
  `sudo systemctl daemon-reload`
  
 Verify your setup by running `df -h` output must look like this:
@@ -288,7 +289,7 @@ setsebool -P httpd_execmem 1
   sudo chown -R apache:apache /var/www/html/wordpress
   sudo chcon -t httpd_sys_rw_content_t /var/www/html/wordpress -R
   sudo setsebool -P httpd_can_network_connect=1
-	sudo setsebool -P httpd_can_network_connect_db 1
+  sudo setsebool -P httpd_can_network_connect_db 1
   ```
 
 ### Step 4 — Install MySQL on both servers
