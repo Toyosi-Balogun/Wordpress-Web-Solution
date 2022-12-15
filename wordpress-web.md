@@ -28,7 +28,7 @@ In this project, we'd demonstarte a Three-tier Architecture while also ensuring 
 
 ![](assets/5.png)
 
-5. Use gdisk utility to create a single partition on **each** of the 3 disks
+5. Use gdisk utility to create a single partition on **each** of the 3 disks.
 
 `$ sudo gdisk /dev/xvdf`
 
@@ -136,9 +136,10 @@ PV         VG Fmt  Attr PSize   PFree
 Output:
 Volume group "webdata-vg" successfully created
 ```
-Verify that your VG has been created successfully by running
+Verify that your VG has been created successfully by running;
 
- `sudo vgs`
+`sudo vgs`
+
 ```
 Output:
  VG         #PV #LV #SN Attr   VSize   VFree
@@ -148,6 +149,7 @@ Output:
 > NOTE: apps-lv will be used to store data for the Website while, logs-lv will be used to store data for logs.
 
 `sudo lvcreate -n apps-lv -L 14G webdata-vg`
+
 ```
 Output:
 
@@ -159,10 +161,10 @@ Output:
 
 Logical volume "logs-lv" created.
 ```
-
 Verify that your Logical Volume has been created successfully by running
 
 `sudo lvs`
+
 ```
 Output:
 
@@ -174,7 +176,6 @@ Output:
 Verify the entire setup:
 
 `sudo vgdisplay -v #view complete setup - VG, PV, and LV`
-
 
 `$ sudo lsblk`
 
@@ -251,14 +252,11 @@ You should end up with something like this:
 2. Install wget, Apache and it’s dependencies and start Apache.
 
 `sudo yum -y install wget httpd php php-mysqlnd php-fpm php-json`
-
 ```
 sudo systemctl enable httpd
 sudo systemctl start httpd
 ```
-
 3. Install PHP and it’s depemdencies and restart Apache.
-
 ```
 sudo yum install https://dl.fedoraproject.org/pub/epel/epel-release-latest-8.noarch.rpm
 sudo yum install yum-utils http://rpms.remirepo.net/enterprise/remi-release-8.rpm
@@ -271,6 +269,7 @@ sudo systemctl enable php-fpm
 setsebool -P httpd_execmem 1
 ```
 4. Restart Apache
+
 `sudo systemctl restart httpd`
  
 5. Download wordpress and copy wordpress to var/www/html
@@ -291,7 +290,6 @@ setsebool -P httpd_execmem 1
   sudo setsebool -P httpd_can_network_connect=1
   sudo setsebool -P httpd_can_network_connect_db 1
   ```
-
 ### Step 4 — Install MySQL on both servers
 `sudo yum update`
 `sudo yum install mysql-server`
@@ -305,6 +303,7 @@ Verify that the service is up and running by using
 if it is not running, restart the service and enable it so it will be running even after reboot:
 
 `sudo systemctl restart mysqld`
+
 `sudo systemctl enable mysqld`
 
 ### Step 5 — Configure DB to work with WordPress
