@@ -366,7 +366,7 @@ Restart mysql service
 
 ![](assets/12.png)
 
-1. Test that you can connect from your Web Server to your DB server
+1. Test that you can connect from your Web Server to your DB server.
 
 `sudo mysql -u admin -p -h <DB-Server-Private-IP-address>`
 
