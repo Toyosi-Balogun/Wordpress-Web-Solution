@@ -408,8 +408,9 @@ You should see something like this:
 
 ![](assets/18.png)
   
-### CONGRATULATIONS!
+### CONGRATULATIONS!!!
 You have learned how to configure Linux storage susbystem and have also deployed a full-scale Web Solution using WordPress CMS and MySQL RDBMS!
+Welldone Toyosi!
 
 
 
